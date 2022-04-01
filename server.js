@@ -18,7 +18,7 @@ matrix = []
 n = 50;
 weat = "winter"
 weather = ["winter", "spring", "summer", "autumn"]
-function weather(){
+function changeWeather(){
    if(weat == "winter")
       weat = "spring"
    else if(weat == "spring")
@@ -27,7 +27,9 @@ function weather(){
       weat = "autumn"
    else if(weat == "autumn")
       weat = "winter"
+      io.sockets.emit("weather", weat);
 }
+setInterval(changeWeather, 5000)
 LivingCrature = require("./LivingCrature")
 Grass = require("./Grass");
 GrassEater = require("./GrassEater");
@@ -176,6 +178,8 @@ io.on('connection', function (socket) {
    socket.on("add predator", addPredator);
    socket.on("add rock", addRock)
    socket.on("add magician", addMagician)
+   socket.on("weather", changeWeather)
+   
 });
 
 var statistics = {};

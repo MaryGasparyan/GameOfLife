@@ -1,25 +1,30 @@
 var socket = io()
 var side = 10;
-var weather = "winter"
+var newWeather = "winter"
 function setup() {
     frameRate(5);
     createCanvas(50 * side, 50 * side);
     background('#acacac');
 }
-var cl = 0
-function changeWeather() {
-    cl++
-}
+socket.on("weather", function (data){
+    newWeather = data;
+})
 function nkarel(matrix) {
 
     for (var y = 0; y < matrix.length; y++) {
         for (var x = 0; x < matrix[0].length; x++) {
             if (matrix[y][x] == 1) {
-                if (c % 2 != 0) {
-                    fill("#80F3CD")
+                if (newWeather == "winter") {
+                    fill("#33F4FF")
                 }
-                else {
-                    fill("green");
+                else if(newWeather == "spring"){
+                    fill("#33FFD5");
+                }
+                else if(newWeather == "summer"){
+                    fill("#33FF4B");
+                }
+                else if(newWeather == "autumn"){
+                    fill("#FFE033");
                 }
 
             }

@@ -1,5 +1,5 @@
 var socket = io()
-var side = 10;
+var side = 15;
 var newWeather = "winter"
 function setup() {
     frameRate(5);

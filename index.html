@@ -10,29 +10,31 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
     <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
-<body>
+<body class = "m-5">
+    
     <div class="tools">
-        <h1 style="color:yellowgreen">Events</h1>
-        <ul>
-            <li>
-                <button onclick="kill()">Kill them all</button>
+        <h1 class = "text-primary">Game Of Life</h1>
+        <ul class="list-unstyled">
+            <li class="list-inline-item">
+                <button class="btn btn-primary" onclick="kill()">Kill them all</button>
             </li>
-            <li>
-                <button onclick="addGrass()">Add grass</button>
+            <li class="list-inline-item">
+                <button class="btn btn-primary"onclick="addGrass()">Add grass</button>
             </li>
-            <li>
-                <button onclick="addGrassEater()">Add grass eater</button>
+            <li class="list-inline-item">
+                <button class="btn btn-primary"onclick="addGrassEater()">Add grass eater</button>
             </li>
-            <li>
-                <button onclick="addPredator()">Add predator</button>
+            <li class="list-inline-item">
+                <button class="btn btn-primary" onclick="addPredator()">Add predator</button>
             </li>
-            <li>
-                <button onclick="addRock()">Add rock</button>
+            <li class="list-inline-item">
+                <button class="btn btn-primary"onclick="addRock()">Add rock</button>
             </li>
-            <li>
-                <button onclick="addMagician()">Add magician</button>
+            <li class="list-inline-item">
+                <button class="btn btn-primary" onclick="addMagician()">Add magician</button>
             </li>
             
         </ul>

@@ -6,6 +6,7 @@ module.exports = class GrassEater extends LivingCrature {
         this.energy = 10;
     }
 
+    
     mul() {
         let emptyCell = super.chooseCell(0);
         let newCell = emptyCell[Math.floor(Math.random() * emptyCell.length)]

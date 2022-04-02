@@ -8,7 +8,6 @@ app.get('/', function (req, res) {
    res.redirect('index.html');
 });
 server.listen(3000);
-
 grassArr = []
 grassEaterArr = []
 predatorArr = [];
@@ -18,16 +17,16 @@ matrix = []
 n = 50;
 weat = "winter"
 weather = ["winter", "spring", "summer", "autumn"]
-function changeWeather(){
-   if(weat == "winter")
+function changeWeather() {
+   if (weat == "winter")
       weat = "spring"
-   else if(weat == "spring")
+   else if (weat == "spring")
       weat = "summer"
-   else if(weat == "summer")
+   else if (weat == "summer")
       weat = "autumn"
-   else if(weat == "autumn")
+   else if (weat == "autumn")
       weat = "winter"
-      io.sockets.emit("weather", weat);
+   io.sockets.emit("weather", weat);
 }
 setInterval(changeWeather, 5000)
 LivingCrature = require("./LivingCrature")
@@ -179,7 +178,7 @@ io.on('connection', function (socket) {
    socket.on("add rock", addRock)
    socket.on("add magician", addMagician)
    socket.on("weather", changeWeather)
-   
+
 });
 
 var statistics = {};

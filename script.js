@@ -10,7 +10,6 @@ socket.on("weather", function (data){
     newWeather = data;
 })
 function nkarel(matrix) {
-
     for (var y = 0; y < matrix.length; y++) {
         for (var x = 0; x < matrix[0].length; x++) {
             if (matrix[y][x] == 1) {

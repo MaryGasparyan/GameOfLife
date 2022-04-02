@@ -4,8 +4,6 @@ module.exports = class LivingCrature {
 		this.y = y;
 		this.index = index;
 		this.multiply = 0;
-
-
 	}
 
 	getNewDirections() {
@@ -35,7 +33,6 @@ module.exports = class LivingCrature {
 		}
 		return found;
 	}
-
 }
 
 

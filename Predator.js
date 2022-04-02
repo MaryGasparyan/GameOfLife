@@ -1,5 +1,4 @@
 var LivingCrature = require("./LivingCrature");
-
 module.exports = class Predator extends LivingCrature {
     constructor(x, y) {
         super(x, y);

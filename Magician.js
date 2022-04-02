@@ -2,7 +2,6 @@ var LivingCrature = require("./LivingCrature");
 var Grass = require("./Grass");
 var GrassEater = require("./GrassEater");
 var Predator = require("./Predator");
-
 module.exports = class Magician extends LivingCrature {
     constructor(x, y) {
         super(x, y);

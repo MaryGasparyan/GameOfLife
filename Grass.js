@@ -1,5 +1,6 @@
 var LivingCrature = require("./LivingCrature");
 
+
 module.exports = class Grass extends LivingCrature {
     constructor(x, y, index, multiply) {
         super(x, y, index, multiply);
